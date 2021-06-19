@@ -72,6 +72,7 @@ p {
 
 .section-2 p {
     color: var(--regalBlue);
+    font-size: 1.2em;
 }
 
 .section-3 {
