@@ -57,11 +57,13 @@
                 </h2>
                 <p>
                     Dada una cadena (A<sub>1</sub>, A<sub>2</sub>,…, A<sub>n</sub>) de n matrices, donde i = 1, 2,…,n,
-                    matriz A, tiene dimensiones p<sub>i-1</sub>xp<sub>i</sub> en donde se desea agrupar el producto el producto
+                    matriz A, tiene dimensiones p<sub>i-1</sub>xp<sub>i</sub> en donde se desea agrupar el producto el
+                    producto
                     A<sub>1</sub>A<sub>2</sub>A<sub>3</sub>…A<sub>n</sub> de forma que se minimice el
                     número de multiplicaciones escalares. En este problema no se nos pide realizar el producto de las
-                    matrices. 
-                    <br/><br/><b>El objetivo es determinar el orden de la multiplicación que proporciona el menor costo.</b>
+                    matrices.
+                    <br /><br /><b>El objetivo es determinar el orden de la multiplicación que proporciona el menor
+                        costo.</b>
                 </p>
             </div>
         </div>
@@ -75,31 +77,34 @@
                 </h2>
                 <p>
                     Considerando, por ejemplo, el método de fuerza bruta que intenta calcular el número de
-                    multiplicaciones escalares de cada orden posible. Por ejemplo, si tenemos cuatro matrices M<sub>1</sub>, M<sub>2</sub>, M<sub>3</sub>
-                    y M<sub>4</sub>, el algoritmo probará los siguientes cinco ordenamientos:
-                    (M<sub>1</sub>(M<sub>2</sub>(M<sub>3</sub>M<sub>4</sub>))), (M<sub>1</sub>((M<sub>2</sub>M<sub>3</sub>)M<sub>4</sub>)), ((M<sub>1</sub>M<sub>2</sub>)(M<sub>3</sub>M<sub>4</sub>)), ((M<sub>1</sub>M<sub>2</sub>)M<sub>3</sub>)M<sub>4</sub>)), ((M<sub>1</sub>(M<sub>2</sub>M<sub>3</sub>))M<sub>4</sub>). En general, el
-                    número de ordenaciones es igual al número de formas de colocar paréntesis para multiplicar las n
-                    matrices de todas las formas posibles.
-                    Sea f(n) el número de formas de entre paréntesis completo un producto de n matrices. Supongamos que
-                    queremos realizar la multiplicaci&oacute;n: (M<sub>1</sub>M<sub>2</sub> ...M<sub>k</sub>) × (Mk+1Mk+2 ...M<sub>n</sub>). Entonces, hay f (k)
-                    formas de poner entre paréntesis
-                    las primeras k matrices. Para cada una de las f(k) formas, hay f(n − k) formas de entre paréntesis
-                    las n - k matrices restantes, para un total de f(k) f(n - k) formas. Dado que k puede asumir
-                    cualquier valor entre 1 y n - 1, el
-                    número total de formas de poner entre paréntesis las n matrices viene dado por la suma:
-                    f(n)=∑_(k=1)^(n-1)▒〖f(k)f(n-k)〗 Observe que solo hay una forma de multiplicar dos matrices y dos
-                    formas de multiplicar tres matrices. Es decir,
-                    f (2) = 1 y f (3) = 2. Para que la recurrencia tenga sentido, dejamos f (1) = 1. Se puede demostrar
-                    que f(n)=1/n ((2n-2)¦(n-1)) Esta recurrencia genera los denominados números catalanes definidos por
-                    Cn = f (n + 1), los primeros diez
-                    términos de los cuales son 1, 1, 2, 5, 14, 42, 132, 429, 1430, 4862, 16796, .... Así, por ejemplo,
-                    hay 4862 formas de multiplicar diez matrices. Por la f&oacute;rmula de Stirling n!≈ √2πn
-                    (n/e)^n,donde e=2.71828…, Tenemos f(n)=1/n
-                    ((2n-2)¦(n-1))=(2n-2)!/(n((n-1)!)^2 )≈4^n/(4√π n^1.5 ) Así, f(n)=Ω(4^n/n^1.5 ) Dado que, para cada
-                    expresi&oacute;n entre paréntesis, encontrar el número de multiplicaciones escalares cuesta Θ (n),
-                    se deduce que el tiempo de ejecuci&oacute;n
-                    del método de fuerza bruta para encontrar la forma &oacute;ptima de multiplicar las n matrices es Ω
-                    (4n / √n), que es impráctico incluso para valores de n de tamaño moderado.
+                    multiplicaciones escalares de cada orden posible. Por ejemplo, si tenemos cuatro matrices
+                    M<sub>1</sub>, M<sub>2</sub>, M<sub>3</sub> y M<sub>4</sub>, el algoritmo probará los siguientes
+                    cinco ordenamientos: (M<sub>1</sub>(M<sub>2</sub>(M<sub>3</sub>M<sub>4</sub>))),
+                    (M<sub>1</sub>((M<sub>2</sub>M<sub>3</sub>)M<sub>4</sub>)),
+                    ((M<sub>1</sub>M<sub>2</sub>)(M<sub>3</sub>M<sub>4</sub>)),
+                    ((M<sub>1</sub>M<sub>2</sub>)M<sub>3</sub>)M<sub>4</sub>)),
+                    ((M<sub>1</sub>(M<sub>2</sub>M<sub>3</sub>))M<sub>4</sub>). En general, el número de ordenaciones es
+                    igual al número de formas de colocar paréntesis para multiplicar las n matrices de todas las formas
+                    posibles. Sea f(n) el número de formas de entre paréntesis completo un producto de n matrices.
+                    Supongamos que queremos realizar la multiplicaci&oacute;n: (M<sub>1</sub>M<sub>2</sub>
+                    ...M<sub>k</sub>) × (M<sub>k+1</sub>M<sub>k+2</sub>...M<sub>n</sub>). Entonces, hay f(k) formas de
+                    poner entre paréntesis las primeras k matrices. Para cada una de las f(k) formas, hay f(n − k)
+                    formas de entre paréntesis las n - k matrices restantes, para un total de f(k)f(n - k) formas. Dado
+                    que k puede asumir cualquier valor entre 1 y n - 1, el número total de formas de poner entre
+                    paréntesis las n matrices viene dado por la suma: f(n) =
+                    ∑<sub>(k=1)</sub><sup>(n-1)</sup>f(k)f(n-k). Observe que solo hay una forma de multiplicar dos
+                    matrices y dos formas de multiplicar tres matrices. Es decir, f (2) = 1 y f (3) = 2. Para que la
+                    recurrencia tenga sentido, dejamos f (1) = 1. Se puede demostrar que f(n)=1/n
+                    (<sup>(2n-2)</sup><sub>(n-1)</sub>) Esta recurrencia genera los denominados números catalanes
+                    definidos por Cn = f (n + 1), los primeros diez términos de los cuales son 1, 1, 2, 5, 14, 42, 132,
+                    429, 1430, 4862, 16796,.... Así, por ejemplo, hay 4862 formas de multiplicar diez matrices. Por la
+                    f&oacute;rmula de Stirling n!≈ √2πn (n/e)<sup>n</sup>,donde e=2.71828…, tenemos
+                    f(n)=1/n(<sup>(2n-2)</sup><sub>(n-1)</sub>)=(2n-2)!/(n((n-1)!)<sup>2</sup>)≈4<sup>n</sup>/(4√π
+                    n<sup>1.5)</sup> Así, f(n)=Ω(4<sup>n</sup>/n<sup>1.5</sup>) Dado que, para cada expresi&oacute;n
+                    entre paréntesis, encontrar el número de multiplicaciones escalares cuesta Θ(n), se deduce que el
+                    tiempo de ejecuci&oacute;n del método de fuerza bruta para encontrar la forma &oacute;ptima de
+                    multiplicar las n matrices es Ω(4<sup>n</sup>/√n), que es impráctico incluso para valores de n de
+                    tamaño moderado.
                 </p>
             </div>
         </div>
