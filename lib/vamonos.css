@@ -174,7 +174,7 @@ table.array tr.array-annotations th {
 }
 
 table.array tr.array-cells td {
-    color: #D6E8EE;
+    color: #001B48;
     border: 1px solid #018ABE;
     background-color: #018ABE;
     transition-property: background-color;
