@@ -7,16 +7,16 @@ html {
     scroll-behavior: smooth;
 }
 
-.navbar {
-    background-color: transparent !important;
-}
-
 :root {
     --botticelli: #D6E8EE;
     --morningGlory: #97CADB;
     --bondiBlue: #018ABE;
     --regalBlue: #02457A;
     --stratos: #001B48;
+}
+
+.text-botticelli {
+    color: var(--botticelli);
 }
 
 h1 {
@@ -35,6 +35,16 @@ h2 {
 p {
     font-weight: 700;
     font-size: 1em;
+}
+
+.carousel-item {
+    height: 100vh;
+    min-height: 350px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 .section-1 {
@@ -97,6 +107,10 @@ p {
 }
 
 .container-fluid ul li a {
-    color: var(--stratos) !important;
+    color: var(--morningGlory) !important;
     font-size: 1.5em;
+}
+
+.boxshaw {
+    text-shadow: 10px 2px 8px rgba(0, 0, 0, 0.55);
 }

@@ -4,47 +4,94 @@
 <head>
     <meta charset="utf-8">
     <title></title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <link rel="stylesheet" href="CSS/styles.css">
+    <link href="./lib/vamonos.css" rel="stylesheet">
+    <link href="./lib/vamonos-demos.css" rel="stylesheet">
+    
+    <style type="text/css">
+        td.row-i.col-k {
+            background-color: #018ABE;
+        }
+        td.row-i.col-j, td.row-jplus1.col-k {
+            background-color: #ccc;
+        }
+       
+    </style>
 </head>
 
 <body>
-    <section class="section-1 container-fluid">
-        <nav class="navbar sticky-top  navbar-expand-lg">
-            <div class="container-fluid">
-                <a class="navbar-brand " href="#"><i class="fas fa-puzzle-piece fa-3x"></i></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-                <div class="collapse navbar-collapse" id="navbarText">
-                    <ul class="navbar-nav navbar-collapse d-flex justify-content-end">
-                        <li class="nav-item">
-                            <u><a class="nav-link" href="#section-2">Descripción</a></u>
-                        </li>
-                        <li class="nav-item">
-                            <u><a class="nav-link" href="#section-3">Solución por fuerza bruta</a></u>
-                        </li>
-                        <li class="nav-item">
-                            <u><a class="nav-link" href="#section-4">Animación</a></u>
-                        </li>
-                    </ul>
-                </div>
+    <nav class="navbar fixed-top  navbar-expand-lg" style="background-color: rgba(0, 27, 72,.9);">
+        <div class="container-fluid">
+            <a class="navbar-brand " href="#"><img style="width: 15%;" src="./IMG/logo.png" alt=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav navbar-collapse d-flex justify-content-end">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#section-2">Descripción</a>
+                    </li>
+                    <li class="nav-item">
+                        <u><a class="nav-link" href="#section-3">Solución por fuerza bruta</a></u>
+                    </li>
+                    <li class="nav-item">
+                        <u><a class="nav-link" href="#section-4">Animación</a></u>
+                    </li>
+                </ul>
             </div>
+        </div>
 
-        </nav>
+    </nav>
+    <!-- <section class="section-1 container-fluid">
+  
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-8">
                     <h1>
-                        Multiplicaci&oacute;n encadenada de matrices
+                        
                     </h1>
                 </div>
             </div>
         </div>
 
-    </section>
+    </section> -->
+    <header>
+        <div id="carouselExampleIndicators" class="carousel slide " data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner" role="listbox">
+                <!-- Slide One - Set the background image for this slide in the line below -->
+                <div class="carousel-item active" style="background-image: url('./IMG/bg1.jpg')">
+
+                </div>
+                <!-- Slide Two - Set the background image for this slide in the line below -->
+                <div class="carousel-item" style="background-image: url('./IMG/bg2.jpg')">
+
+                </div>
+                <!-- Slide Three - Set the background image for this slide in the line below -->
+                <div class="carousel-item" style="background-image: url('./IMG/bg3.jpg')">
+
+                </div>
+                <div class="carousel-caption d-md-block">
+                    <div class="main-decorated-box section-xs">
+                        <h1 class="text-botticelli wow slideInRight " data-wow-delay=".3s"><span class="boxshaw d-block font-weight-bold"> Multiplicaci&oacute;n encadenada de matrices</span></h1>
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </header>
     <section class="section-2 container-fluid" id="section-2">
         <div class="row row-50">
             <div class="col-12">
@@ -98,9 +145,185 @@
         </div>
     </section>
     <section class="section-4" id="section-4">
-
+        <div class="container">
+            <div class="row">
+                <div class="col-md-offset-1 col-md-10 panel-default">
+                    <div class="panel-heading">
+                        Matrix-Chain Multiplication
+                    </div>
+                    <div class="panel panel-default">
+                       
+                        <div class="row nopadding panel-body">
+                            <div class="col-sm-4" id="controls"></div>
+                            <div class="col-sm-4 nopadding">
+                                
+                                <div class="pseudocode-procedures">
+                                    <div id="pseudocode" title="MatrixChainMult(dim):">
+                                        for i = 1 to dim.length - 1
+                                            opt[i,i] = 0
+                                        for l = 2 to dim.length
+                                            for i = 1 to dim.length - l
+                                                k = i + l - 1
+                                                opt[i,k] = &infin;
+                                                for j = i to k-1
+                                                    prev = best[i,j] + best[j+1,k]
+                                                    val = dim[i-1]*dim[j]*dim[k] + prev
+                                                    if opt[i,k] &gt; val
+                                                        opt[i,k] = val
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 nopadding">
+                                <table class="variable-widgets">
+                                    <tr><td><div id="dim-var"></div></td>
+                                        <td><div  id="dim"></div></td>
+                                    </tr>
+                                    <tr><td><div id="opt-var"></div></td>
+                                        <td><div id="opt"></div></td>
+                                    </tr>
+                                    <tr><td><div id="val-var"></div></td>
+                                        <td><div id="val"></div></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
-</body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    <script src="js/core.min.js"></script>
+    <script src="js/script.js"></script>
+    <script type="text/javascript" src="./lib/vamonos-all.js"></script>
 
+
+    <script>
+        $('.carousel').carousel({
+            interval: 4000
+        })
+    </script>
+</body>
+<script type="text/javascript">
+    var myviz = new Vamonos.Visualizer({
+        widgets: [
+            new Vamonos.Widget.VarName({
+                container: "val-var",
+                varName: "val",
+            }),
+    
+            new Vamonos.Widget.VarDisplay({
+                container: "val",
+                varName: "val",
+            }),
+    
+            new Vamonos.Widget.VarName({
+                container: "dim-var",
+                varName: "dim",
+                inputVar: true,
+                watchable: false
+            }),
+    
+            new Vamonos.Widget.Array({
+                container: "dim",
+                varName: "dim",
+                defaultInput: [4, 3, 5, 1, 2, 7],
+                showIndices: ["i-1", "j", "k"],
+            }),
+    
+            new Vamonos.Widget.VarName({
+                container: "opt-var",
+                varName: "global::opt",
+                displayName: "opt",
+            }),
+    
+            new Vamonos.Widget.Matrix({
+                container: "opt",
+                varName: "global::opt",
+                cssRules: [
+                    ["row", ">", "col", "shaded"],
+                    ["row", "=", "i", "row-i"],
+                    ["col", "=", "j", "col-j"],
+                    ["row", "=", "j+1", "row-jplus1"],
+                    ["col", "=", "k", "col-k"],
+                ],
+                showIndices: [
+                    ["row", "i"],
+                    ["row", "j+1"],
+                    ["col", "j"],
+                    ["col", "k"]
+                ]
+            }),
+    
+            new Vamonos.Widget.VarName({
+                container: "sol-var",
+                varName: "global::sol",
+                displayName: "sol",
+                watching: true,
+            }),
+    
+            new Vamonos.Widget.Matrix({
+                container: "sol",
+                varName: "global::sol",
+                cssRules: [
+                    ["row", ">", "col", "shaded"],
+                    ["row", "=", "i", "row-i"],
+                    ["col", "=", "j", "col-j"],
+                    ["row", "=", "j+1", "row-jplus1"],
+                    ["col", "=", "k", "col-k"],
+                ],
+                showIndices: [
+                    ["row", "i"],
+                    ["row", "j+1"],
+                    ["col", "j"],
+                    ["col", "k"]
+                ]
+            }),
+    
+            new Vamonos.Widget.Pseudocode({
+                container: "pseudocode",
+                breakpoints: [7,10],
+            }),
+    
+            new Vamonos.Widget.Controls({
+                container: "controls",
+                //expandWidth: true,
+            }),
+    
+        ],
+    
+        algorithm: function (_) {
+            with (this) {
+                var l;
+                global.opt = {};
+                global.sol = {};
+                for (var _i = 1; _i < dim.length; _i++) {
+    _(1);               i = _i;
+    _(2);               global.opt[i] = {}; global.opt[i][i] = 0;
+                }
+                i = null;
+                for (l = 2; l < dim.length; _(3), l++) {
+    _(3);           for (var _i = 1; _i < dim.length - l + 1; _i++) {
+    _(4);               i = _i;
+    _(5);               k = i + l - 1;
+    _(6);               global.opt[i][k] = Infinity;
+                        for (var _j = i; _j < k; _j++) {
+    _(7);                   j = _j;
+    _(8);                   prev = global.opt[i][j] + global.opt[j+1][k];
+    _(9);                   val = dim[i-1]*dim[j]*dim[k] + prev;
+    _(10);                  if (global.opt[i][k] > val) {
+    _(11);                      global.opt[i][k] = val;
+                            }
+                        }
+                        j = null;
+                    }
+                    i = null;
+                }
+            }
+        },
+    
+    });
+    
+    </script>
 </html>
