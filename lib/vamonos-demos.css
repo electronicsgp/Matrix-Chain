@@ -1,0 +1,64 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:300|Fjalla+One);
+#main,
+#footer {
+    width: 850px;
+    margin: 20px auto 20px auto;
+}
+
+#main {
+    padding: 20px;
+    background-color: white;
+    box-shadow: 8px 8px 20px #ccc;
+}
+
+#header h4 {
+    font-weight: normal;
+    text-align: center;
+    color: #888;
+    margin: 4px;
+}
+
+code {
+    background: #eee;
+    border: 1px solid #ddd;
+}
+
+pre {
+    box-shadow: 2px 2px 10px #ccc;
+    margin: 8px 20px 8px 20px;
+    background: #eee;
+    border: 1px solid #aaa;
+    padding: 8px;
+    overflow-x: auto;
+    text-align: left;
+}
+
+pre code {
+    background: inherit;
+    border: none;
+}
+
+#footer {
+    text-align: center;
+    color: #555;
+    font-size: 12px;
+}
+
+a {
+    color: #d85a1a;
+}
+
+.next-page {
+    margin-top: 36px;
+    padding-top: 12px;
+    border-top: 1px solid #ccc;
+    text-align: right;
+}
+
+ol ol {
+    list-style-type: lower-alpha;
+}
+
+.construction {
+    color: #d85a1a;
+}
